@@ -3,6 +3,7 @@ import kong.unirest.Unirest;
 import models.goodReadsSearch.GoodreadsResponse;
 import org.json.JSONObject;
 import org.json.XML;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,6 +13,7 @@ import static io.restassured.RestAssured.given;
 public class GoodReadsApiCalls {
     String key = "11AzOEYXS2oqXaofmANuFA";
     String secret = "PUXzY4zDsa6RzLI7ihXn4FRjQwpdtHL7DEf5CSpAI";
+
 
     GoodreadsResponse searchApiObj(String searchString){
         return given().header("Accept", "*/*")
