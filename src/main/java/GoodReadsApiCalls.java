@@ -1,11 +1,4 @@
-import kong.unirest.HttpResponse;
-import kong.unirest.Unirest;
-import models.goodReadsSearch.GoodreadsResponse;
-import org.json.JSONObject;
-import org.json.XML;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import goodReadsSearch.GoodreadsResponse;
 
 import static io.restassured.RestAssured.given;
 
