@@ -1,12 +1,12 @@
 package httprequests;
 
-import models.goodReadsSearch.GoodreadsResponse;
+import models.goodreadssearch.GoodreadsResponse;
 
 import java.io.File;
 import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
-import static configReader.PropertyReader.readPropertiesFile;
+import static configreader.PropertyReader.readPropertiesFile;
 
 
 public class GoodReadsApiCalls {
@@ -31,10 +31,6 @@ public class GoodReadsApiCalls {
                 .when().get(url + uri).then().extract().body().as(GoodreadsResponse.class);
     }
 
-    public static void main(String[] args) {
-        GoodReadsApiCalls test = new GoodReadsApiCalls();
-        System.out.println(test.searchApiObj("treasure").getSearch().getResults().getWork().get(0).getId().getValue());
-    }
 }
 
 

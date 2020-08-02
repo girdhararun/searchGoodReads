@@ -1,17 +1,16 @@
-package httpServer;
+package httpserver;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import httprequests.SlackPostMessage;
 import keywords.BaseSearch;
-import models.slackMessage.SlackMessage;
+import models.slackmessage.SlackMessage;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.LinkedHashMap;

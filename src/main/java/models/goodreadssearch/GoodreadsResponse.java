@@ -1,4 +1,4 @@
-package models.goodReadsSearch;
+package models.goodreadssearch;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;

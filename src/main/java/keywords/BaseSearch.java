@@ -1,7 +1,7 @@
 package keywords;
 
 import httprequests.GoodReadsApiCalls;
-import models.goodReadsSearch.GoodreadsResponse;
+import models.goodreadssearch.GoodreadsResponse;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
