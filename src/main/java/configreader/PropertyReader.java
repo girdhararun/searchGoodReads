@@ -25,11 +25,4 @@ public class PropertyReader {
         }
         return prop;
     }
-
-    public static void main(String args[]) throws IOException {
-        String testDataFile = "appdetails.properties";
-        Properties prop = readPropertiesFile(System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator +"resources"+ File.separator + "appData" + File.separator + testDataFile);
-        System.out.println("browser: " + prop.getProperty("browser"));
-    }
-
 }
