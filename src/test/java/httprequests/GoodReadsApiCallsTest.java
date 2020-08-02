@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 
 class GoodReadsApiCallsTest {
-    GoodReadsApiCalls call = null;
+    GoodReads call = null;
 
     @BeforeEach
     void init(){
-        call = new GoodReadsApiCalls();
+        call = new GoodReads();
     }
 
     @org.junit.jupiter.api.Test

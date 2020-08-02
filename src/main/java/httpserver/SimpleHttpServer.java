@@ -15,9 +15,6 @@ import java.io.InputStream;
 import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
-
-import static configreader.PropertyReader.readPropertiesFile;
 
 /*
  * a simple static http server

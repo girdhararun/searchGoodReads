@@ -1,6 +1,6 @@
 package keywords;
 
-import httprequests.GoodReadsApiCalls;
+import httprequests.GoodReads;
 import models.goodreadssearch.GoodreadsResponse;
 
 import java.io.File;
@@ -12,14 +12,14 @@ import static configreader.PropertyReader.readPropertiesFile;
 
 public class BaseSearch {
 
-    GoodReadsApiCalls getApi;
+    GoodReads getApi;
     GoodreadsResponse.Search.Results results;
     HashMap<String, String> bookNameUrl = new LinkedHashMap<>();
     protected Properties appProp;
     String testDataFile;
 
     public BaseSearch() {
-        getApi = new GoodReadsApiCalls();
+        getApi = new GoodReads();
         testDataFile = "appdetails.properties";
         appProp = readPropertiesFile(System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "appData" + File.separator + testDataFile);
     }

@@ -3,12 +3,11 @@ package httprequests;
 import models.goodreadssearch.GoodreadsResponse;
 import static io.restassured.RestAssured.given;
 
-public class GoodReadsApiCalls extends BaseRequests {
+public class GoodReads extends BaseRequests {
     String key, secret, url, uri;
 
-    public GoodReadsApiCalls() {
+    public GoodReads() {
         key = appProp.getProperty("key");
-        secret = appProp.getProperty("secret");
         url = appProp.getProperty("url");
         uri = appProp.getProperty("uri");
     }
