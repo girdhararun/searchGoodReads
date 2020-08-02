@@ -6,7 +6,7 @@ import java.io.File;
 import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
-import static utils.PropertyReader.readPropertiesFile;
+import static configReader.PropertyReader.readPropertiesFile;
 
 
 public class GoodReadsApiCalls {

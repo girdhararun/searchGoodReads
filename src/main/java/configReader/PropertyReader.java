@@ -1,4 +1,4 @@
-package utils;
+package configReader;
 
 import java.io.File;
 import java.io.FileInputStream;

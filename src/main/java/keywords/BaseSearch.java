@@ -12,11 +12,11 @@ public class BaseSearch {
     GoodreadsResponse.Search.Results results;
     HashMap<String, String> bookNameUrl = new LinkedHashMap<>();
 
-    BaseSearch() {
+    public BaseSearch() {
         getApi = new GoodReadsApiCalls();
     }
 
-    public void getBookDetails(String searchData) {
+    public HashMap<String, String> getBookDetails(String searchData) {
         results = getApi.searchApiObj(searchData).getSearch().getResults();
 
         for (int i = 0; i < results.getWork().size(); i++) {
@@ -24,9 +24,10 @@ public class BaseSearch {
             String title = results.getWork().get(i).getBestBook().getTitle();
             bookNameUrl.put(title, "https://www.goodreads.com/book/isbn/" + isbn);
         }
+        return bookNameUrl;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         new BaseSearch().getBookDetails("treasure");
     }
 }
