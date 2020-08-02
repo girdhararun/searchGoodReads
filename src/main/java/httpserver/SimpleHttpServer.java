@@ -26,6 +26,7 @@ public class SimpleHttpServer {
         server.createContext("/search", new MyHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
+        System.out.println("Server Initiated");
     }
 
     static class MyHandler implements HttpHandler {
@@ -34,7 +35,7 @@ public class SimpleHttpServer {
             byte[] doc = IOUtils.toByteArray(body);
             BaseSearch book = new BaseSearch();
             SlackPostMessage slackPost = new SlackPostMessage();
-            HashMap<String, String> results = new LinkedHashMap<>();
+            HashMap<String, String> results;
             String[] data = new String(doc).split("&");
             results = book.getBookDetails(StringEscapeUtils.unescapeHtml4(data[8].split("=")[1]));
             String result_string = "";

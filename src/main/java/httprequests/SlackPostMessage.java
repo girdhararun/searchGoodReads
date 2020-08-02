@@ -1,15 +1,18 @@
 package httprequests;
-
 import static io.restassured.RestAssured.given;
 
-public class SlackPostMessage {
+public class SlackPostMessage extends BaseRequests {
+
+    public SlackPostMessage() {
+    }
 
     public String postMessageOnSlack(String message) {
+        String slackHook = appProp.getProperty("slackIncomingHook");
         return given()
                 .header("Content-type", "application/json").body(message)
                 .expect()
                 .statusCode(200)
-                .when().post("https://hooks.slack.com/services/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")
+                .when().post(slackHook)
                 .then().extract().body().asString();
     }
 }
